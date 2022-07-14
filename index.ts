@@ -34,6 +34,6 @@ app.use("/api/user", userRoute);
 app.use("/api/lab", labRoute);
 app.use("/api/itp", itpRoute);
 
-app.listen(process.env.HEROKU_URL || 5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
 });
