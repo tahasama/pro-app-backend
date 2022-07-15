@@ -26,6 +26,14 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/itn", itnRoute);
+app.use("/api/concrete", concreteRoute);
+app.use("/api/reinforcement", reinforcementRoute);
+app.use("/api/qorncr", qorNcrRoute);
+app.use("/api/user", userRoute);
+app.use("/api/lab", labRoute);
+app.use("/api/itp", itpRoute);
+
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -34,14 +42,6 @@ app.use(function (req, res, next) {
   );
   next();
 });
-
-app.use("/api/itn", itnRoute);
-app.use("/api/concrete", concreteRoute);
-app.use("/api/reinforcement", reinforcementRoute);
-app.use("/api/qorncr", qorNcrRoute);
-app.use("/api/user", userRoute);
-app.use("/api/lab", labRoute);
-app.use("/api/itp", itpRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
