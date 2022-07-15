@@ -9,6 +9,10 @@ const LabSchema = new mongooses.Schema(
     dateL: { type: Date, required: false },
     manifoldUrl: { type: String, required: false },
     reportUrl: { type: String, required: false },
+    valueL1: { type: Number, required: false },
+    valueL2: { type: Number, required: false },
+    valueL3: { type: Number, required: false },
+    valueL4: { type: Number, required: false },
   },
   {
     timestamps: true,
