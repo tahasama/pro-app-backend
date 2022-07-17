@@ -32,7 +32,7 @@ routerU.post("/", async (req, res) => {
   var mailOptions2 = {
     from: process.env.UserOwner,
     to: `${req.body.email}`,
-    subject: "request authirization to browse the app",
+    subject: "request authorization to browse the app",
     text: `Your inscription will be examined
     if you are an authorized member you will receive an email very shortly ,
     ginving you access to the app, Thank you for your patience`,
