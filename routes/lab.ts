@@ -2,7 +2,7 @@ const Lab = require("../models/Lab.ts");
 const routerL = require("express").Router();
 
 // get all itns
-routerL.get("/all", async (req: any, res) => {
+routerL.get("/all", async (req: any, res: any) => {
   try {
     const labs = await Lab.find({});
     res.status(200).json(labs);

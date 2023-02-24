@@ -80,13 +80,13 @@ routerU.post("/", async (req: any, res: any) => {
 });
 
 // get project by uid
-routerU.get("/:uid", async (req, res) => {
+routerU.get("/:uid", async (req: any, res: any) => {
   try {
     const user = await User.find({
       uid: { $regex: req.params.uid, $options: "i" },
     });
     res.status(200).json(user);
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json(err);
   }
 });
